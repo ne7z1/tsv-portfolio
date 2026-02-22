@@ -1,26 +1,63 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* Фоны и текст */
+  --color-bg-primary: #F5F5F5;
+  --color-bg-secondary: #FFFFFF;
+  --color-bg-third: #E4E4E4;
+  --color-text-main: #0E0E0E;
+
+  /* Кнопки */
+  --color-btn-primary: #1E3A8A;
+  --color-btn-primary-text: #F5F5F5;
+  --color-btn-primary-hover: #2563EB;
+  --color-btn-primary-active: #1E2B5A;
+  --color-btn-primary-disabled: #E0E7FF;
+  --color-btn-primary-disabled-text: #94A3B8;
+  
+  --color-btn-secondary: transparent;
+  --color-btn-secondary-border: #1E3A8A;
+  --color-btn-secondary-text: #1E3A8A;
+  --color-btn-secondary-hover: #1E3A8A;
+  --color-btn-secondary-hover-text: #F5F5F5;
+  --color-btn-secondary-active: #1E2B5A;
+  --color-btn-secondary-active-text: #F5F5F5;
+  --color-btn-secondary-disabled: #CBD5E1;
+  --color-btn-secondary-disabled-text: #94A3B8;
+
+  --color-btn-textonly: transparent;
+  --color-btn-textonly-default: #1E3A8A;
+  --color-btn-textonly-hover: #2563EB;
+  --color-btn-textonly-active: #1E2B5A;
+  --color-btn-textonly-disabled: #CBD5E1;
+
+  /* Отступы */
+  --spacing-xs: 8px;
+  --spacing-s12: 12px;
+  --spacing-s: 16px;
+  --spacing-m: 24px;
+  --spacing-l: 64px;
+  --spacing-xl: 120px;
+
+  /* Типографика */
+  --text-h1: 64px;
+  --text-h1--line-height: 72px;
+  --tracking-h1: -0.02em;
+  
+  --text-body: 16px;
+  --text-body--line-height: 24px;
+
+  --text-btn: 18px;
+  --text-btn--line-height: 22px;
+
+  --text-caption: 14px;
+  --text-caption--line-height: 20px;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* Применяем базовые стили к body */
+@layer base {
+  body {
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-main);
   }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
 }
