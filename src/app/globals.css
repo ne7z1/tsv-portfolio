@@ -43,6 +43,12 @@
   --text-h1: 64px;
   --text-h1--line-height: 72px;
   --tracking-h1: -0.02em;
+
+  --text-h2: 32px;
+  --text-h2--line-height: 40px;
+
+  --text-h3: 24px;
+  --text-h3--line-height: 32px;
   
   --text-body: 16px;
   --text-body--line-height: 24px;

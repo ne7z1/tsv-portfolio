@@ -33,7 +33,7 @@ export default function Home() {
           </div>
 
           {/* =Правая колонка */}
-          <div className="w-full max-w-[496px] relative aspect-[496/374] rounded-lg overflow-hidden bg-bg-third shrink-0">
+          <div className="hidden lg:block w-full max-w-[496px] relative aspect-[496/374] rounded-lg overflow-hidden bg-bg-third shrink-0">
             {/* <Image src="/hero-image.jpg" alt="Hero" fill className="object-cover" priority /> */}
           </div>
 

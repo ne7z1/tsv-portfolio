@@ -40,8 +40,10 @@ return (
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         isVisible ? "translate-y-0" : "-translate-y-full"
       } ${
-        isScrolled
-          ? "bg-bg-primary/90 backdrop-blur-md shadow-sm" 
+        isMenuOpen
+          ? "bg-bg-primary shadow-md" 
+          : isScrolled
+          ? "bg-bg-primary/90 backdrop-blut-md shadow-md"
           : "bg-transparent" 
       }`}
     >
@@ -54,10 +56,11 @@ return (
         </Link>
 
         {/* Десктопное меню */}
-        <nav className="hidden md:flex gap-m items-center">
-            <Button variant="text" href="#about">Обо мне</Button>
-            <Button variant="text" href="#about">Кейсы</Button>
-            <Button variant="text" href="#about">Контакты</Button>
+        <nav className="hidden md:flex gap-xs items-center">
+            <Button variant="text" href="#about" className="text-caption font-medium">Обо мне</Button>
+            <Button variant="text" href="#case" className="text-caption font-medium">Кейсы</Button>
+            <Button variant="text" href="#contacts" className="text-caption font-medium">Контакты</Button>
+            <Button variant="text" href="#graphic" className="text-caption font-medium">Графика</Button>
         </nav>
 
         {/* Мобильная кнопка Бургер */}
@@ -75,14 +78,15 @@ return (
 
       {/* Мобильное выпадающее меню */}
       <div
-        className={`md:hidden absolute top-[80px] left-0 w-full bg-bg-primary border-b border-gray-200 transition-all duration-300 overflow-hidden ${
+        className={`md:hidden absolute top-[80px] left-0 w-full bg-bg-primary transition-all duration-300 overflow-hidden ${
           isMenuOpen ? "max-h-[300px] opacity-100 py-4" : "max-h-0 opacity-0 py-0"
         }`}
       >
-        <div className="flex flex-col items-center gap-6">
-          <Button variant="text" href="#about" onClick={() => setIsMenuOpen(false)}>Обо мне</Button>
-          <Button variant="text" href="#cases" onClick={() => setIsMenuOpen(false)}>Кейсы</Button>
-          <Button variant="text" href="#contacts" onClick={() => setIsMenuOpen(false)}>Контакты</Button>
+        <div className="flex flex-col items-center gap-s">
+          <Button variant="text" href="#about" onClick={() => setIsMenuOpen(false)} className="text-caption font-medium">Обо мне</Button>
+          <Button variant="text" href="#cases" onClick={() => setIsMenuOpen(false)} className="text-caption font-medium">Кейсы</Button>
+          <Button variant="text" href="#contacts" onClick={() => setIsMenuOpen(false)} className="text-caption font-medium">Контакты</Button>
+          <Button variant="text" href="#graphic" onClick={() => setIsMenuOpen(false)} className="text-caption font-medium">Графика</Button>
         </div>
       </div>
     </header>

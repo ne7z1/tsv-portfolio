@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
 
 const inter = Inter({ subsets: ["latin", "cyrillic"], weight: ['400', '500', '600', '700'], display: 'swap' });
 
@@ -15,8 +16,13 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         
         <Header />
-        
-        {children}
+
+        <div className="min-h-screen flex flex-col">
+          <main className="flex-grow">
+            {children}
+          </main>
+          <Footer />
+        </div>
         
       </body>
     </html>
