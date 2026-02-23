@@ -4,11 +4,13 @@ export default function Button({
     children,
     variant = 'primary',
     href,
-    className ='',
+    className = '',
     disabled = false,
+    showIcon = false, // Добавляем новый проп
     ...props
 }) {
-    const baseStyles = "inline-flex items-center justify-center font-semibold transition-colors duration-200 cursor-pointer disabled:cursor-not-allowed";
+    // Добавил 'group' в базовые стили, чтобы иконка реагировала на ховер всей кнопки
+    const baseStyles = "inline-flex items-center justify-center font-semibold transition-all duration-200 cursor-pointer disabled:cursor-not-allowed group";
 
     const variants = {
         primary: `
@@ -27,7 +29,7 @@ export default function Button({
             disabled:border-btn-secondary-disabled disabled:border-[2px] disabled:text-btn-secondary-disabled-text disabled:bg-btn-secondary disabled:shadow-none
         `,
 
-        text:`
+        text: `
             px-s py-xs
             bg-transparent text-btn-secondary-text 
             hover:text-btn-primary-hover
@@ -43,38 +45,49 @@ export default function Button({
 
     const combinedClasses = `${baseStyles} ${variants[variant]} ${className}`;
 
-    if (href && !disabled) {
-    // МАГИЯ ЗДЕСЬ: Теперь проверяем не только http, но и якоря (#)
-      const isExternalOrAnchor = href.startsWith('http') || href.startsWith('mailto') || href.startsWith('#');
-
-      if (isExternalOrAnchor) {
-        // Для внешних сайтов и ЯКОРЕЙ используем обычный тег <a>
-        return (
-          <a href={href} className={combinedClasses} {...props}>
+    const content = (
+        <>
             <span>{children}</span>
-          </a>
+            {showIcon && (
+                <div className="relative w-5 h-5 shrink-0 ml-2 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5">
+                    <img
+                        src="/arrow-up-right-blue.svg"
+                        alt=""
+                        className={`w-full h-full block ${variant === 'primary' ? 'brightness-0 invert' : 'group-hover:hidden'}`}
+                    />
+                    {variant !== 'primary' && (
+                        <img
+                            src="/arrow-up-right.svg"
+                            alt=""
+                            className="w-full h-full hidden group-hover:block"
+                        />
+                    )}
+                </div>
+            )}
+        </>
+    );
+
+    if (href && !disabled) {
+        const isExternalOrAnchor = href.startsWith('http') || href.startsWith('mailto') || href.startsWith('#');
+
+        if (isExternalOrAnchor) {
+            return (
+                <a href={href} className={combinedClasses} {...props}>
+                    {content}
+                </a>
+            );
+        }
+
+        return (
+            <Link href={href} className={combinedClasses} {...props}>
+                {content}
+            </Link>
         );
     }
 
-    if (isExternal) {
-      return (
-        <a href={href} className={combinedClasses} {...props}>
-          <span>{children}</span>
-        </a>
-      );
-    }
-
     return (
-      <Link href={href} className={combinedClasses} {...props}>
-        <span>{children}</span>
-      </Link>
+        <button className={combinedClasses} disabled={disabled} {...props}>
+            {content}
+        </button>
     );
-  }
-
-  return (
-    <button className={combinedClasses} disabled={disabled} {...props}>
-      <span>{children}</span>
-    </button>
-  );
 }
-    

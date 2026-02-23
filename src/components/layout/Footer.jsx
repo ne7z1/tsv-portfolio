@@ -47,7 +47,7 @@ export default function Footer() {
                             >
                                 ХАБР
                             </Button>
-                            <Button 
+                            <Button
                               variant="text" 
                               href="https://www.behance.net/alexandbezdush" 
                               target="_blank"
