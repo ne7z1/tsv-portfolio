@@ -17,13 +17,13 @@ export default function Footer() {
     }
 
     return(
-        <footer className="bg-text-main text-bg-primary py-s12 md:py-m rounded-t-[32px] md:rounded-t-[16px]">
+        <footer id="contacts" className="bg-text-main text-bg-primary py-s12 md:py-m rounded-t-[32px] md:rounded-t-[16px]">
             {/* контейнер */}
             <div className="max-w-[1440px] mx-auto px-4 lg:px-xl pt-16 lg:pt-xl pb-8 lg:pb-l">
                 {/* сетка на два колоннки */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-l mb-16 md:mb-24">
                     {/* левая колонка */}
-                    <div className="flex flex-col gap-m md:gap-xl items-start">
+                    <div className="flex flex-col gap-s md:gap-m items-start w-full max-w-[640px] p-4 lg:p-m">
                         <h2 className="text-h2 font-semibold leading-tight">
                             Открыт к новым проектам
                         </h2>
@@ -33,7 +33,7 @@ export default function Footer() {
                     </div>
 
                     {/* Правая колонка */}
-                    <div className="flex flex-col gap-xs md:gap-m">
+                    <div className="flex flex-col gap-s md:gap-m items-start w-full max-w-[496px] shrink-0 p-4 lg:p-m">
                         <h2 className="text-h2 font-semibold leading-tight">
                             Контакты
                         </h2>
@@ -92,10 +92,10 @@ export default function Footer() {
                 }`}
             >
                 {/* Иконка галочки */}
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
                 <polyline points="20 6 9 17 4 12"></polyline>
                 </svg>
-                <span className="font-medium text-[16px]">Email скопирован в буфер!</span>
+                <span className="font-medium text-body">Email скопирован в буфер!</span>
             </div>
         </footer>
     )

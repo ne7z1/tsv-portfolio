@@ -2,93 +2,92 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import Button from "@/components/ui/Button";
 
 export default function Header(){
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isVisible, setIsVisible] = useState(true);
-    const [lastSrollY, setLastScrollY] = useState(0);
+    const [lastScrollY, setLastScrollY] = useState(0); // Исправил опечатку :)
     const [isScrolled, setIsScrolled] = useState(false);
 
-useEffect(() => {
-    const handleScroll = () => {
-        const currentScrollY = window.scrollY;
+    useEffect(() => {
+        const handleScroll = () => {
+            const currentScrollY = window.scrollY;
 
-        setIsScrolled(currentScrollY > 20);
+            setIsScrolled(currentScrollY > 20);
 
-        if (window.innerWidth < 768) {
-            if (currentScrollY > lastSrollY && currentScrollY > 80) {
-                setIsVisible(false);
-                setIsMenuOpen(false);
+            if (window.innerWidth < 768) {
+                if (currentScrollY > lastScrollY && currentScrollY > 80) {
+                    setIsVisible(false);
+                    setIsMenuOpen(false);
+                } else {
+                    setIsVisible(true);
+                }
             } else {
                 setIsVisible(true);
             }
-        } else {
-            setIsVisible(true);
-        }
 
-        setLastScrollY(currentScrollY);
-    };
+            setLastScrollY(currentScrollY);
+        };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-}, [lastSrollY]);
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, [lastScrollY]);
 
-return (
-    <header
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        isVisible ? "translate-y-0" : "-translate-y-full"
-      } ${
-        isMenuOpen
-          ? "bg-bg-primary shadow-md" 
-          : isScrolled
-          ? "bg-bg-primary/90 backdrop-blut-md shadow-md"
-          : "bg-transparent" 
-      }`}
-    >
-      {/* Главный контейнер */}
-      <div className="max-w-[1440px] mx-auto px-4 md:px-12 lg:px-[120px] h-[80px] flex justify-between items-center">
-        
-        {/* Логотип */}
-        <Link href="/" className="hover:opacity-80 transition-opacity">
-          <img src="/Logo.svg" alt="TSV Logo" className="h-[24px] w-auto" />
-        </Link>
-
-        {/* Десктопное меню */}
-        <nav className="hidden md:flex gap-xs items-center">
-            <Button variant="text" href="#about" className="text-caption font-medium">Обо мне</Button>
-            <Button variant="text" href="#case" className="text-caption font-medium">Кейсы</Button>
-            <Button variant="text" href="#contacts" className="text-caption font-medium">Контакты</Button>
-            <Button variant="text" href="#graphic" className="text-caption font-medium">Графика</Button>
-        </nav>
-
-        {/* Мобильная кнопка Бургер */}
-        <button
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="md:hidden flex flex-col justify-center items-center w-10 h-10 space-y-[6px]"
-          aria-label="Toggle menu"
+    return (
+        <header
+          className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+            isVisible ? "translate-y-0" : "-translate-y-full"
+          } ${
+            isMenuOpen
+              ? "bg-bg-primary shadow-md" 
+              : isScrolled
+              ? "bg-bg-primary/90 backdrop-blur-md shadow-md"
+              : "bg-transparent" 
+          }`}
         >
-          {/* Три полоски бургера, которые превращаются в крестик при открытии */}
-          <span className={`block w-6 h-[2px] bg-text-main rounded-full transition-transform duration-300 ${isMenuOpen ? "rotate-45 translate-y-[8px]" : ""}`}></span>
-          <span className={`block w-6 h-[2px] bg-text-main rounded-full transition-opacity duration-300 ${isMenuOpen ? "opacity-0" : ""}`}></span>
-          <span className={`block w-6 h-[2px] bg-text-main rounded-full transition-transform duration-300 ${isMenuOpen ? "-rotate-45 -translate-y-[8px]" : ""}`}></span>
-        </button>
-      </div>
+          <div className="max-w-[1440px] mx-auto px-[32px] lg:px-[144px] h-[80px] flex justify-between items-center">
+            
+            {/* Логотип */}
+            <Link href="/" className="hover:opacity-80 transition-opacity">
+              <img src="/Logo.svg" alt="TSV Logo" className="h-[24px] w-auto" />
+            </Link>
 
-      {/* Мобильное выпадающее меню */}
-      <div
-        className={`md:hidden absolute top-[80px] left-0 w-full bg-bg-primary transition-all duration-300 overflow-hidden ${
-          isMenuOpen ? "max-h-[300px] opacity-100 py-4" : "max-h-0 opacity-0 py-0"
-        }`}
-      >
-        <div className="flex flex-col items-center gap-s">
-          <Button variant="text" href="#about" onClick={() => setIsMenuOpen(false)} className="text-caption font-medium">Обо мне</Button>
-          <Button variant="text" href="#cases" onClick={() => setIsMenuOpen(false)} className="text-caption font-medium">Кейсы</Button>
-          <Button variant="text" href="#contacts" onClick={() => setIsMenuOpen(false)} className="text-caption font-medium">Контакты</Button>
-          <Button variant="text" href="#graphic" onClick={() => setIsMenuOpen(false)} className="text-caption font-medium">Графика</Button>
-        </div>
-      </div>
-    </header>
-  );
+            {/* Десктопное меню */}
+            <nav className="hidden md:flex gap-xs items-center">
+                <Button variant="text" href="#about" className="text-caption font-medium">Обо мне</Button>
+                <Button variant="text" href="#cases" className="text-caption font-medium">Кейсы</Button>
+                <Button variant="text" href="#contacts" className="text-caption font-medium">Контакты</Button>
+                <Button variant="text" href="#graphic" className="text-caption font-medium">Графика</Button>
+            </nav>
+
+            {/* Мобильная кнопка Бургер */}
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="md:hidden relative flex flex-col justify-center items-center w-10 h-10 outline-none focus:outline-none active:outline-none"
+              style={{ WebkitTapHighlightColor: 'transparent' }}
+              aria-label="Toggle menu"
+            >
+              {/* Бургер */}
+              <span className={`absolute h-[2px] w-6 bg-text-main rounded-full transition-all duration-300 ${isMenuOpen ? "rotate-45" : "-translate-y-2"}`}></span>
+              <span className={`absolute h-[2px] w-6 bg-text-main rounded-full transition-all duration-300 ${isMenuOpen ? "opacity-0" : "opacity-100"}`}></span>
+              <span className={`absolute h-[2px] w-6 bg-text-main rounded-full transition-all duration-300 ${isMenuOpen ? "-rotate-45" : "translate-y-2"}`}></span>
+            </button>
+          </div>
+
+          {/* Мобильное выпадающее меню */}
+          <div
+            className={`md:hidden absolute top-[80px] left-0 w-full bg-bg-primary transition-all duration-300 overflow-hidden ${
+              isMenuOpen ? "max-h-[300px] opacity-100 py-4 shadow-md" : "max-h-0 opacity-0 py-0"
+            }`}
+          >
+            <div className="flex flex-col items-center gap-s">
+              <Button variant="text" href="#about" onClick={() => setIsMenuOpen(false)} className="text-caption font-medium">Обо мне</Button>
+              <Button variant="text" href="#cases" onClick={() => setIsMenuOpen(false)} className="text-caption font-medium">Кейсы</Button>
+              <Button variant="text" href="#contacts" onClick={() => setIsMenuOpen(false)} className="text-caption font-medium">Контакты</Button>
+              <Button variant="text" href="#graphic" onClick={() => setIsMenuOpen(false)} className="text-caption font-medium">Графика</Button>
+            </div>
+          </div>
+        </header>
+    );
 }

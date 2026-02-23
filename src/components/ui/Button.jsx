@@ -43,8 +43,18 @@ export default function Button({
 
     const combinedClasses = `${baseStyles} ${variants[variant]} ${className}`;
 
-  if (href && !disabled) {
-    const isExternal = href.startsWith('http') || href.startsWith('mailto');
+    if (href && !disabled) {
+    // МАГИЯ ЗДЕСЬ: Теперь проверяем не только http, но и якоря (#)
+      const isExternalOrAnchor = href.startsWith('http') || href.startsWith('mailto') || href.startsWith('#');
+
+      if (isExternalOrAnchor) {
+        // Для внешних сайтов и ЯКОРЕЙ используем обычный тег <a>
+        return (
+          <a href={href} className={combinedClasses} {...props}>
+            <span>{children}</span>
+          </a>
+        );
+    }
 
     if (isExternal) {
       return (
