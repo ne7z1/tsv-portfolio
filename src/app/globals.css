@@ -70,3 +70,15 @@ html {
     color: var(--color-text-main);
   }
 }
+
+:root {
+  --graphic-bg-primary: #D10000;
+  --graphic-bg-secondary: #0A0A0A;
+  --graphic-text-primary: #FFFFFF;
+  --graphic-text-secondary: #000000;
+}
+
+.cursor-retro,
+.cursor-retro * {
+  cursor: url('/Mouse-Cursor.svg') 0 0, auto !important;
+}

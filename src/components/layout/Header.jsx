@@ -42,11 +42,11 @@ export default function Header(){
             isMenuOpen
               ? "bg-bg-primary shadow-md" 
               : isScrolled
-              ? "bg-bg-primary/40 backdrop-blur-md shadow-md"
+              ? "bg-bg-primary/70 backdrop-blur-md shadow-md"
               : "bg-transparent" 
           }`}
         >
-          <div className="w-full max-w-[1440px] mx-auto px-s md:px-s12 lg:px-l h-[80px] flex justify-between items-center">
+          <div className="w-full max-w-[1440px] mx-auto px-s md:px-s12 lg:px-xl h-[80px] flex justify-between items-center">
             
             {/* Логотип */}
             <Link href="/" className="hover:opacity-80 transition-opacity">
