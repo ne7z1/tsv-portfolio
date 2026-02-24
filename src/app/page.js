@@ -4,15 +4,10 @@ import Cases from "@/components/sections/Cases";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-bg-primary pt-32 lg:pt-40 pb-12 lg:pb-24">
+    <main className="w-full min-h-screen bg-bg-primary pt-[160px] pb-[120px] space-y-[64px] lg:space-y-[120px]">
       
-      {/* Лендинг */}
       <Hero />
-      
-      {/* Кейсы */}
       <Cases />
-
-      {/* Обо мне */}
       <About />
 
     </main>

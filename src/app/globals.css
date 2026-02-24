@@ -64,7 +64,6 @@ html {
   --text-caption--line-height: 20px;
 }
 
-/* Применяем базовые стили к body */
 @layer base {
   body {
     background-color: var(--color-bg-primary);

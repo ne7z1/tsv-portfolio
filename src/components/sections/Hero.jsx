@@ -3,14 +3,14 @@ import Spline from '@splinetool/react-spline/next';
 
 export default function Hero() {
   return (
-    <section className="max-w-[1440px] mx-auto px-4 md:px-12 lg:px-[120px]">
-      <div className="flex flex-col lg:flex-row justify-between items-stretch gap-12 lg:gap-l">
+    <section className="w-full max-w-[1440px] mx-auto px-xs md:px-s12 lg:px-xl">
+      
+      <div className="flex flex-col lg:flex-row justify-between items-center lg:items-stretch gap-s12">
         
-        {/* Левая колонка */}
-        <div className="flex flex-col gap-6 w-full max-w-[640px] p-4 lg:p-m">
+        <div className="flex flex-col justify-center md:gap-l gap-m w-full lg:max-w-[640px]">
           
-          <div className="flex flex-col gap-m">
-            <h1 className="text-h2 md:text-h1 font-bold text-text-main tracking-h1">
+          <div className="flex flex-col md:gap-m gap-s">
+            <h1 className="text-h2 md:text-h1 font-bold text-text-main tracking-h1 leading-tight">
               UX/UI & PRODUCT<br />DESIGNER
             </h1>
             <p className="text-body font-normal text-text-main max-w-[480px]">
@@ -29,11 +29,8 @@ export default function Hero() {
 
         </div>
 
-        {/* Правая колонка */}
-        <div className="hidden lg:block w-full max-w-[496px] p-4 lg:p-m ">
-          <div className="w-full h-full bg-[#E2E8F0] rounded-lg flex items-center justify-center">
-            
-          </div>
+        <div className="hidden lg:flex w-full lg:w-[496px] min-h-[326px] lg:min-h-[326px] bg-[#D2D2D2] rounded-lg items-center justify-center">
+          {/* СЮДА ВСТАВИТЬ ЧТО ТО */}
         </div>
 
       </div>

@@ -7,7 +7,7 @@ import Button from "@/components/ui/Button";
 export default function Header(){
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isVisible, setIsVisible] = useState(true);
-    const [lastScrollY, setLastScrollY] = useState(0); // Исправил опечатку :)
+    const [lastScrollY, setLastScrollY] = useState(0); 
     const [isScrolled, setIsScrolled] = useState(false);
 
     useEffect(() => {
@@ -42,15 +42,15 @@ export default function Header(){
             isMenuOpen
               ? "bg-bg-primary shadow-md" 
               : isScrolled
-              ? "bg-bg-primary/90 backdrop-blur-md shadow-md"
+              ? "bg-bg-primary/40 backdrop-blur-md shadow-md"
               : "bg-transparent" 
           }`}
         >
-          <div className="max-w-[1440px] mx-auto px-[32px] lg:px-[144px] h-[80px] flex justify-between items-center">
+          <div className="w-full max-w-[1440px] mx-auto px-s md:px-s12 lg:px-l h-[80px] flex justify-between items-center">
             
             {/* Логотип */}
             <Link href="/" className="hover:opacity-80 transition-opacity">
-              <img src="/Logo.svg" alt="TSV Logo" className="h-[24px] w-auto" />
+              <img src="/Logo.svg" alt="TSV Logo" className="h-m w-auto" />
             </Link>
 
             {/* Десктопное меню */}
@@ -58,7 +58,7 @@ export default function Header(){
                 <Button variant="text" href="#about" className="text-caption font-medium">Обо мне</Button>
                 <Button variant="text" href="#cases" className="text-caption font-medium">Кейсы</Button>
                 <Button variant="text" href="#contacts" className="text-caption font-medium">Контакты</Button>
-                <Button variant="text" href="#graphic" className="text-caption font-medium">Графика</Button>
+                <Button variant="text" href="/graphic" className="text-caption font-medium">Графика</Button>
             </nav>
 
             {/* Мобильная кнопка Бургер */}
@@ -69,23 +69,23 @@ export default function Header(){
               aria-label="Toggle menu"
             >
               {/* Бургер */}
-              <span className={`absolute h-[2px] w-6 bg-text-main rounded-full transition-all duration-300 ${isMenuOpen ? "rotate-45" : "-translate-y-2"}`}></span>
-              <span className={`absolute h-[2px] w-6 bg-text-main rounded-full transition-all duration-300 ${isMenuOpen ? "opacity-0" : "opacity-100"}`}></span>
-              <span className={`absolute h-[2px] w-6 bg-text-main rounded-full transition-all duration-300 ${isMenuOpen ? "-rotate-45" : "translate-y-2"}`}></span>
+              <span className={`absolute h-[2px] w-6 bg-text-main rounded-full transition-all duration-200 ${isMenuOpen ? "rotate-45" : "-translate-y-2"}`}></span>
+              <span className={`absolute h-[2px] w-6 bg-text-main rounded-full transition-all duration-200 ${isMenuOpen ? "opacity-0" : "opacity-100"}`}></span>
+              <span className={`absolute h-[2px] w-6 bg-text-main rounded-full transition-all duration-200 ${isMenuOpen ? "-rotate-45" : "translate-y-2"}`}></span>
             </button>
           </div>
 
-          {/* Мобильное выпадающее меню */}
+          {/* Мобильное меню */}
           <div
-            className={`md:hidden absolute top-[80px] left-0 w-full bg-bg-primary transition-all duration-300 overflow-hidden ${
-              isMenuOpen ? "max-h-[300px] opacity-100 py-4 shadow-md" : "max-h-0 opacity-0 py-0"
+            className={`md:hidden absolute top-[80px] left-0 w-full bg-bg-primary transition-all duration-200 overflow-hidden ${
+              isMenuOpen ? "max-h-[300px] opacity-100 py-s shadow-md" : "max-h-0 opacity-0 py-0"
             }`}
           >
             <div className="flex flex-col items-center gap-s">
               <Button variant="text" href="#about" onClick={() => setIsMenuOpen(false)} className="text-caption font-medium">Обо мне</Button>
               <Button variant="text" href="#cases" onClick={() => setIsMenuOpen(false)} className="text-caption font-medium">Кейсы</Button>
               <Button variant="text" href="#contacts" onClick={() => setIsMenuOpen(false)} className="text-caption font-medium">Контакты</Button>
-              <Button variant="text" href="#graphic" onClick={() => setIsMenuOpen(false)} className="text-caption font-medium">Графика</Button>
+              <Button variant="text" href="/graphic" onClick={() => setIsMenuOpen(false)} className="text-caption font-medium">Графика</Button>
             </div>
           </div>
         </header>

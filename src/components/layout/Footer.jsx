@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { useState } from "react";
 import Button from "../ui/Button";
 
@@ -17,27 +16,27 @@ export default function Footer() {
     }
 
     return(
-        <footer id="contacts" className="bg-text-main text-bg-primary py-s12 md:py-m rounded-t-[32px] md:rounded-t-[16px]">
-            {/* контейнер */}
-            <div className="max-w-[1440px] mx-auto px-4 lg:px-xl pt-16 lg:pt-xl pb-8 lg:pb-l">
-                {/* сетка на два колоннки */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-l mb-16 md:mb-24">
-                    {/* левая колонка */}
-                    <div className="flex flex-col gap-s md:gap-m items-start w-full max-w-[640px] p-4 lg:p-m">
+        <footer id="contacts" className="bg-text-main text-bg-primary py-12 md:py-24 rounded-t-[24px] md:rounded-t-[24px">
+            <div className="w-full max-w-[1440px] mx-auto px-4 md:px-12 lg:px-xl">
+            
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-l lg:gap-l mb-16 md:mb-l">
+                    
+                    {/* Левая колонка */}
+                    <div className="flex flex-col gap-m md:gap-xl items-start w-full">
                         <h2 className="text-h2 font-semibold leading-tight">
                             Открыт к новым проектам
                         </h2>
                         <Button variant="primary" href="https://t.me/ne7z1" target="_blank" rel="noopener noreferrer">
-                        Написать в Telegram
+                            Написать в Telegram
                         </Button>
                     </div>
 
                     {/* Правая колонка */}
-                    <div className="flex flex-col gap-s md:gap-m items-start w-full max-w-[496px] shrink-0 p-4 lg:p-m">
+                    <div className="flex flex-col gap-m md:gap-m items-start w-full md:max-w-[496px]">
                         <h2 className="text-h2 font-semibold leading-tight">
                             Контакты
                         </h2>
-                        <div className="flex flex-col items-start gap-xs">
+                        <div className="flex flex-col items-start gap-m md:gap-xs">
                             <Button 
                               variant="text" 
                               href="https://career.habr.com/ne7z1" 
@@ -76,8 +75,9 @@ export default function Footer() {
                     </div>
 
                 </div>
-                {/* нижняя часть */}
-                <div className="w-full border-t border-bg-primary/20 pt-8 flex justify-center items-center">
+                
+                {/* 3. НИЖНЯЯ ЧАСТЬ */}
+                <div className="w-full border-t border-bg-primary/20 pt-m flex justify-center items-center">
                     <p className="text-caption text-bg-primary/60 text-center text-left">
                     © 2026 TSV. <br />
                     Спроектировано с инженерной точностью
@@ -85,13 +85,13 @@ export default function Footer() {
                 </div>
 
             </div>
+            
             {/* Уведомление */}
             <div 
-                className={`fixed bottom-8 right-8 md:bottom-12 md:right-12 bg-btn-primary text-bg-primary px-6 py-4 rounded-lg shadow-xl flex items-center gap-3 transition-all duration-300 z-50 ${
+                className={`fixed bottom-m right-m md:bottom-s12 md:right-s12 bg-btn-primary text-bg-primary px-m py-s rounded-lg shadow-xl flex items-center gap-s12 transition-all duration-300 z-50 ${
                 copied ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0 pointer-events-none"
                 }`}
             >
-                {/* Иконка галочки */}
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
                 <polyline points="20 6 9 17 4 12"></polyline>
                 </svg>

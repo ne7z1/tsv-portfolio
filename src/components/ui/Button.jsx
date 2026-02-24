@@ -36,7 +36,7 @@ export default function Button({
             [&>span]:relative [&>span]:inline-block
             [&>span]:after:content-[''] [&>span]:after:absolute [&>span]:after:left-0 [&>span]:after:-bottom-[4px] 
             [&>span]:after:h-[1.5px] [&>span]:after:w-0 [&>span]:after:bg-current 
-            [&>span]:after:transition-[width] [&>span]:after:duration-300 [&>span]:after:ease-out
+            [&>span]:after:transition-[width] [&>span]:after:duration-200 [&>span]:after:ease-out
             hover:[&>span]:after:w-full
             active:text-[#1E2B5A] active:[&>span]:after:bg-current
             disabled:text-[#CBD5E1] disabled:[&>span]:after:hidden
@@ -49,7 +49,7 @@ export default function Button({
         <>
             <span>{children}</span>
             {showIcon && (
-                <div className="relative w-5 h-5 shrink-0 ml-2 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5">
+                <div className="relative w-5 h-5 shrink-0 ml-2 transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5">
                     <img
                         src="/arrow-up-right-blue.svg"
                         alt=""

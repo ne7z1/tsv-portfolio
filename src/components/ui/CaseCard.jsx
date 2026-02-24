@@ -25,15 +25,15 @@ export default function CaseCard({ title, tags, image, href = "#" }) {
           <h3 className="
             text-h3 font-medium text-text-main leading-tight
             relative w-fit pb-1
-            transition-colors duration-300 group-hover:text-btn-primary-hover
+            transition-colors duration-200 group-hover:text-btn-primary-hover
             after:absolute after:left-0 after:bottom-0
             after:h-[2px] after:bg-btn-primary-hover
             after:w-0 group-hover:after:w-full
-            after:transition-all after:duration-300 after:ease-in-out">
+            after:transition-all after:duration-200 after:ease-in-out">
             {title}
           </h3>
           
-          <div className="transition-transform duration-300 group-hover:translate-x-2 pt-1 shrink-0">
+          <div className="transition-transform duration-200 group-hover:translate-x-2 pt-1 shrink-0">
             <img src="/ArrowRight.svg" alt="Arrow" width={24} height={24} className="block group-hover:hidden" />
             <img src="/ArrowRightBlue.svg" alt="Arrow Blue" width={24} height={24} className="hidden group-hover:block" />
           </div>
