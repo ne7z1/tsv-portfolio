@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 const lettersData = [
   { id: 'g1', char: 'G', initWeight: 900, line: 1 },
   { id: 'r1', char: 'R', initWeight: 900, line: 1 },
-  { id: 'a1', char: 'A', initWeight: 300, line: 1 },
+  { id: 'a1', char: 'A', initWeight: 200, line: 1 },
   { id: 'p1', char: 'P', initWeight: 900, line: 1 },
   { id: 'h1', char: 'H', initWeight: 900, line: 1 },
   { id: 'i1', char: 'I', initWeight: 900, line: 1 },
@@ -17,7 +17,7 @@ const lettersData = [
   { id: 'w2', char: 'W', initWeight: 900, line: 2 },
   { id: 'o2', char: 'O', initWeight: 200, line: 2 },
   { id: 'r3', char: 'R', initWeight: 900, line: 2 },
-  { id: 'k2', char: 'K', initWeight: 300, line: 2 },
+  { id: 'k2', char: 'K', initWeight: 200, line: 2 },
   { id: 's2', char: 'S', initWeight: 900, line: 2 },
 ];
 
@@ -54,7 +54,6 @@ export default function Hero() {
   const line1Letters = lettersData.filter(l => l.line === 1);
   const line2Letters = lettersData.filter(l => l.line === 2);
 
-  // РЕНДЕР СТРОКИ
   const renderLetterLine = (letters) => (
     <div className="flex items-center whitespace-nowrap select-none">
         {letters.map((item) => (

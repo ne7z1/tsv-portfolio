@@ -32,7 +32,7 @@ export default function Footer() {
                     </div>
 
                     {/* Правая колонка */}
-                    <div className="flex flex-col gap-m md:gap-m items-start w-full md:max-w-[496px]">
+                    <div className="flex flex-col gap- md:gap-m items-start w-full md:max-w-[496px]">
                         <h2 className="text-h2 font-semibold leading-tight">
                             Контакты
                         </h2>
