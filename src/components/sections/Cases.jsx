@@ -3,10 +3,10 @@ import Button from "@/components/ui/Button";
 
 export default function Cases() {
   const casesData = [
-    { title: "AnalyticsHub", tags: ["UX/UI", "Desktop App", "2026"], image: "/COVER.png"},
-    { title: "W.I.P", tags: ["W.I.P"], image: "/image.png"},
-    { title: "W.I.P", tags: ["W.I.P"], image: "/image.png"},
-    { title: "W.I.P", tags: ["W.I.P"], image: "/image.png"},
+    { title: "ПРОЕКТ: TSV.", tags: ["UX/UI", "Экосистема", "2026"], image: "/image.png", href: "/product/tsv"},
+    { title: "ПРОЕКТ: Wylery", tags: ["UX/UI", "Экосистема", "2026"], image: "/image.png", href: "/product/wylery"},
+    { title: "AnalyticsHub", tags: ["UX/UI", "Приложение", "2026"], image: "/COVER.png", href: "/product/analyticshub"},
+    { title: "Скоро", tags: ["Работа в процессе"], image: "/image.png"},
   ];
 
   return (
@@ -16,7 +16,7 @@ export default function Cases() {
       
         <div>
           <h2 className="text-h2 font-semibold text-text-main">
-            Кейсы
+            Проекты
           </h2>
         </div>
 
@@ -28,6 +28,7 @@ export default function Cases() {
                 title={project.title} 
                 tags={project.tags} 
                 image={project.image}
+                href={project.href}
               />
             ))}
           </div>

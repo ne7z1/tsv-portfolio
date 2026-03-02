@@ -85,7 +85,7 @@ export default function About() {
               </div>
 
               <div className="flex flex-col gap-xs">
-                <span className="text-body font-normal text-text-main">Soft Skills</span>
+                <span className="text-body font-normal text-text-main">Социальные навыки</span>
                 <ul className="list-disc list-inside text-body font-normal text-text-main space-y-2">
                   <li>Перевод бизнес-требований в код</li>
                   <li>Автономность</li>

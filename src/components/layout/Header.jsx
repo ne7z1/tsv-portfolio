@@ -42,7 +42,7 @@ export default function Header(){
             isMenuOpen
               ? "bg-bg-primary shadow-md" 
               : isScrolled
-              ? "bg-bg-primary/70 backdrop-blur-md shadow-md"
+              ? "bg-bg-primary/90 backdrop-blur-md shadow-md"
               : "bg-transparent" 
           }`}
         >
@@ -56,7 +56,7 @@ export default function Header(){
             {/* Десктопное меню */}
             <nav className="hidden md:flex gap-xs items-center">
                 <Button variant="text" href="#about" className="text-caption font-medium">Обо мне</Button>
-                <Button variant="text" href="#cases" className="text-caption font-medium">Кейсы</Button>
+                <Button variant="text" href="#cases" className="text-caption font-medium">Проекты</Button>
                 <Button variant="text" href="#contacts" className="text-caption font-medium">Контакты</Button>
                 <Button variant="text" href="/graphic" className="text-caption font-medium">Графика</Button>
             </nav>
@@ -83,7 +83,7 @@ export default function Header(){
           >
             <div className="flex flex-col items-center gap-s">
               <Button variant="text" href="#about" onClick={() => setIsMenuOpen(false)} className="text-caption font-medium">Обо мне</Button>
-              <Button variant="text" href="#cases" onClick={() => setIsMenuOpen(false)} className="text-caption font-medium">Кейсы</Button>
+              <Button variant="text" href="#cases" onClick={() => setIsMenuOpen(false)} className="text-caption font-medium">Проекты</Button>
               <Button variant="text" href="#contacts" onClick={() => setIsMenuOpen(false)} className="text-caption font-medium">Контакты</Button>
               <Button variant="text" href="/graphic" onClick={() => setIsMenuOpen(false)} className="text-caption font-medium">Графика</Button>
             </div>

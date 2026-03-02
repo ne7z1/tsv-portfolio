@@ -1,6 +1,5 @@
 import Link from "next/link";
 
-// ДОБАВИЛИ prop `image`
 export default function CaseCard({ title, tags, image, href = "#" }) {
   return (
     <Link 

@@ -11,7 +11,7 @@ export default function Hero() {
           
           <div className="flex flex-col md:gap-m gap-s">
             <h1 className="text-h2 md:text-h1 font-bold text-text-main tracking-h1 leading-tight">
-              UX/UI & PRODUCT<br />DESIGNER
+              UX/UI & PRODUCT<br />ДИЗАЙНЕР
             </h1>
             <p className="text-body font-normal text-text-main max-w-[480px]">
               Создаю интерфейсы, которые снижают когнитивную нагрузку и приносят прибыль бизнесу
@@ -20,7 +20,7 @@ export default function Hero() {
           
           <div className="flex flex-wrap gap-s">
             <Button variant="primary" href="#cases">
-              Кейсы
+              Проекты
             </Button>
             <Button variant="secondary" href="#contacts">
               Контакты
