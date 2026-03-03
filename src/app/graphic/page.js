@@ -7,12 +7,9 @@ export default function GraphicPage() {
   return (
     <main className="w-full">
 
-      <Hero />
-      
+      <Hero />    
       <About />
-
       <Works />
-
       <Footer />
 
     </main>

@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import Button from "@/components/ui/Button";
 
 export default function Header(){
@@ -9,6 +10,19 @@ export default function Header(){
     const [isVisible, setIsVisible] = useState(true);
     const [lastScrollY, setLastScrollY] = useState(0); 
     const [isScrolled, setIsScrolled] = useState(false);
+    
+    const pathname = usePathname();
+
+    const handleScroll = (e, targetId) => {
+        if (pathname === "/product" || pathname === "/") {
+            e.preventDefault();
+            const element = document.getElementById(targetId);
+            if (element) {
+                element.scrollIntoView({ behavior: "smooth" });
+                window.history.replaceState(null, "", pathname);
+            }
+        }
+    };
 
     useEffect(() => {
         const handleScroll = () => {
@@ -55,9 +69,9 @@ export default function Header(){
 
             {/* Десктопное меню */}
             <nav className="hidden md:flex gap-xs items-center">
-                <Button variant="text" href="#about" className="text-caption font-medium">Обо мне</Button>
-                <Button variant="text" href="#cases" className="text-caption font-medium">Проекты</Button>
-                <Button variant="text" href="#contacts" className="text-caption font-medium">Контакты</Button>
+                <Button variant="text" href="/product#about" onClick={(e) => handleScroll(e, "about")} className="text-caption font-medium">Обо мне</Button>
+                <Button variant="text" href="/product#cases" onClick={(e) => handleScroll(e, "cases")} className="text-caption font-medium">Проекты</Button>
+                <Button variant="text" href="/product#contacts" onClick={(e) => handleScroll(e, "contacts")} className="text-caption font-medium">Контакты</Button>
                 <Button variant="text" href="/graphic" className="text-caption font-medium">Графика</Button>
             </nav>
 
@@ -82,9 +96,9 @@ export default function Header(){
             }`}
           >
             <div className="flex flex-col items-center gap-s">
-              <Button variant="text" href="#about" onClick={() => setIsMenuOpen(false)} className="text-caption font-medium">Обо мне</Button>
-              <Button variant="text" href="#cases" onClick={() => setIsMenuOpen(false)} className="text-caption font-medium">Проекты</Button>
-              <Button variant="text" href="#contacts" onClick={() => setIsMenuOpen(false)} className="text-caption font-medium">Контакты</Button>
+              <Button variant="text" href="/product#about" onClick={(e) => { setIsMenuOpen(false); handleScroll(e, "about"); }} className="text-caption font-medium">Обо мне</Button>
+              <Button variant="text" href="/product#cases" onClick={(e) => { setIsMenuOpen(false); handleScroll(e, "cases"); }} className="text-caption font-medium">Проекты</Button>
+              <Button variant="text" href="/product#contacts" onClick={(e) => { setIsMenuOpen(false); handleScroll(e, "contacts"); }} className="text-caption font-medium">Контакты</Button>
               <Button variant="text" href="/graphic" onClick={() => setIsMenuOpen(false)} className="text-caption font-medium">Графика</Button>
             </div>
           </div>

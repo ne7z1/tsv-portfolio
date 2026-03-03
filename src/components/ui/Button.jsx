@@ -6,10 +6,10 @@ export default function Button({
     href,
     className = '',
     disabled = false,
-    showIcon = false, // Добавляем новый проп
+    showIcon = false,
     ...props
 }) {
-    // Добавил 'group' в базовые стили, чтобы иконка реагировала на ховер всей кнопки
+    
     const baseStyles = "inline-flex items-center justify-center font-semibold transition-all duration-200 cursor-pointer disabled:cursor-not-allowed group";
 
     const variants = {

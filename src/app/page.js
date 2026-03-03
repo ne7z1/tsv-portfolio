@@ -1,30 +1,38 @@
-import Button from "@/components/ui/Button";
+"use client";
 
-export default function SelectionHub() {
+import { useState } from "react";
+import HubToggle from "@/components/hub/HubToggle";
+import GraphicSection from "@/components/hub/GraphicSection";
+import ProductSection from "@/components/hub/ProductSection";
+
+export default function HubPage() {
+  const [mode, setMode] = useState("product");
+
   return (
-    <main className="w-full min-h-screen bg-bg-primary flex flex-col items-center justify-center gap-12 p-4">
-      
-      <div className="text-center flex flex-col gap-4">
-        <h1 className="text-h2 md:text-h1 font-bold text-text-main tracking-tight">
-          TSV.
-        </h1>
-        <p className="text-body text-text-main/70">
-          Выберите направление
-        </p>
-      </div>
-
-      <div className="flex flex-col sm:flex-row gap-6">
-        {/* Ведет на наш старый добрый Product */}
-        <Button variant="secondary" href="/product">
-          Product Design
-        </Button>
+    <main 
+      className={`min-h-screen w-full flex flex-col justify-center items-center transition-colors duration-700 overflow-hidden
+      ${mode === "product" ? "bg-bg-primary" : "bg-[var(--graphic-bg-primary)]"}`}
+    >
+      <div className="w-full max-w-[1440px] mx-auto px-4 md:px-12 lg:px-[120px] flex flex-col items-center py-[100px]">
         
-        {/* Ведет на новую горячую страницу Графики */}
-        <Button variant="primary" href="/graphic">
-          Graphic Design
-        </Button>
-      </div>
+        <div className="mb-12 lg:mb-16">
+          <img 
+            src={mode === "product" ? "/Logo.svg" : "/logo2.svg"} 
+            alt="TSV." 
+            className="h-8 md:h-10 lg:h-12 w-auto block transition-all duration-500" 
+          />
+        </div>
 
+        <div className="mb-16 lg:mb-24 w-full flex justify-center">
+          <HubToggle mode={mode} setMode={setMode} />
+        </div>
+
+        <div className="w-full relative">
+          {mode === "product" && <ProductSection />}
+          {mode === "graphic" && <GraphicSection />}
+        </div>
+
+      </div>
     </main>
   );
 }

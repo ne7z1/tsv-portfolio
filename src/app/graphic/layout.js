@@ -1,6 +1,11 @@
 import { Unbounded } from "next/font/google";
 import Header from "@/components/graphic/Header";
 
+export const metadata = {
+  title: "TSV.Графика",
+  description: "Портфолио графики",
+};
+
 const unbounded = Unbounded({ 
   subsets: ["cyrillic", "latin"],
   display: 'swap',

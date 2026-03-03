@@ -6,7 +6,6 @@ import Logos from "./Works/Logos";
 
 import { useState, useEffect, useRef } from "react";
 
-// Твой компонент вкладок с крутым ховер-эффектом (оставил как есть)
 const TabItem = ({ id, part1, part2, hover1, hover2, activeTab, onClick }) => {
   const isActive = activeTab === id;
   return (

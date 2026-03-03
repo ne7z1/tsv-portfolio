@@ -3,10 +3,10 @@ import Button from "@/components/ui/Button";
 
 export default function Cases() {
   const casesData = [
-    { title: "ПРОЕКТ: TSV.", tags: ["UX/UI", "Экосистема", "2026"], image: "/image.png", href: "/product/tsv"},
-    { title: "ПРОЕКТ: Wylery", tags: ["UX/UI", "Экосистема", "2026"], image: "/image.png", href: "/product/wylery"},
-    { title: "AnalyticsHub", tags: ["UX/UI", "Приложение", "2026"], image: "/COVER.png", href: "/product/analyticshub"},
-    { title: "Скоро", tags: ["Работа в процессе"], image: "/image.png"},
+    { title: "ПРОЕКТ: TSV.", tags: ["UX/UI", "Экосистема", "2026"], image: "/image.webp", href: "/product/tsv"},
+    { title: "ПРОЕКТ: Wylery", tags: ["UX/UI", "Экосистема", "2026"], image: "/image.webp", href: "/product/wylery"},
+    { title: "AnalyticsHub", tags: ["UX/UI", "Приложение", "2026"], image: "/COVER.webp", href: "/product/analyticshub"},
+    { title: "Скоро", tags: ["Работа в процессе"], image: "/image.webp"},
   ];
 
   return (
