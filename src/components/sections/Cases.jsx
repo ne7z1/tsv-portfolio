@@ -6,11 +6,11 @@ export default function Cases() {
     { title: "ПРОЕКТ: TSV.", tags: ["UX/UI", "Экосистема", "2026"], image: "/image.webp", href: "/product/tsv"},
     { title: "ПРОЕКТ: Wylery", tags: ["UX/UI", "Экосистема", "2026"], image: "/image.webp", href: "/product/wylery"},
     { title: "AnalyticsHub", tags: ["UX/UI", "Приложение", "2026"], image: "/COVER.webp", href: "/product/analyticshub"},
-    { title: "Скоро", tags: ["Работа в процессе"], image: "/image.webp"},
+    { title: "КосмоПицца", tags: ["UX/UI", "Приложение", "2026"], image: "/image.webp", href: "/product/cosmopizza"}, 
   ];
 
   return (
-    <section id="cases" className="block w-full max-w-[1440px] mx-auto px-s md:px-s12 lg:px-xl">
+    <section id="cases" className="block w-full max-w-360 mx-auto px-s md:px-s12 lg:px-xl">
       
       <div className="flex flex-col gap-m lg:gap-l">
       

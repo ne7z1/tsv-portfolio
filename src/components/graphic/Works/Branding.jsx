@@ -19,7 +19,7 @@ const sizeClasses = {
 const BrandingCard = ({ item, onClick }) => (
   <div 
     onClick={() => onClick(item)}
-    className={`${sizeClasses[item.type] || sizeClasses.base} relative group overflow-hidden bg-black cursor-pointer border-[0.5px] border-(white/10)`}
+    className={`${sizeClasses[item.type] || sizeClasses.base} relative group overflow-hidden bg-black cursor-pointer border-[0.5px] border-white/10`}
   >
     <div className="w-full h-full transition-all duration-1000 group-hover:scale-105 group-hover:opacity-20 group-hover:grayscale">
       <img src={item.thumbnail} alt={item.name} className="w-full h-full object-cover" />

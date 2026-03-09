@@ -10,7 +10,6 @@ export default function GraphicPage() {
       <Hero />    
       <About />
       <Works />
-      <Footer />
 
     </main>
   );
