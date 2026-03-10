@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 
 
 const logosData = [
-  { id: 1, year: "2026", name: "Wylery | Фото & Видео", src: "/works/logos/wylery.webp", type: "big" },
+  { id: 1, year: "2026", name: "v w j | Фото & Видео", src: "/works/logos/wylery.webp", type: "big" },
   { id: 2, year: "2026", name: "СИТИ ГРУМ | Груминг салон", src: "/works/logos/СИТИГРУM.webp", type: "big" },
   { id: 7, year: "2026", name: "AnalyticHUB | BI-инструмент", src: "/works/logos/Ahub.webp", type: "extrawide" },
   { id: 3, year: "2025", name: "TSV.", src: "/works/logos/TSV.webp", type: "base" },
@@ -56,7 +56,7 @@ export default function Logos() {
 
   return (
     <div className="w-full pb-32 relative">
-      <div className="grid grid-cols-2 md:grid-cols-4 grid-flow-dense gap-[1px] bg-(--graphic-bg-secondary) border-[0.5px] border-white/10">
+      <div className="grid grid-cols-2 md:grid-cols-4 grid-flow-dense gap-px bg-(--graphic-bg-secondary) border-[0.5px] border-white/10">
         
         {logosData.map((logo) => (
           <LogoCard key={logo.id} logo={logo} onClick={setSelectedLogo} />
@@ -66,13 +66,13 @@ export default function Logos() {
 
       {selectedLogo && (
         <div 
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/95 backdrop-blur-sm p-4 md:p-12 transition-opacity duration-300"
+          className="fixed inset-0 z-100 flex items-center justify-center bg-black/95 backdrop-blur-sm p-4 md:p-12 transition-opacity duration-300"
           onClick={() => setSelectedLogo(null)}
         >
           
           <button 
             onClick={() => setSelectedLogo(null)}
-            className="absolute top-6 right-6 md:top-10 md:right-12 z-[110] group flex items-center justify-center bg-red-600 text-white h-12 px-4 md:h-16 md:px-6 cursor-pointer focus:outline-none transition-transform duration-300 hover:scale-95 shadow-2xl"
+            className="absolute top-6 right-6 md:top-10 md:right-12 z-110 group flex items-center justify-center bg-red-600 text-white h-12 px-4 md:h-16 md:px-6 cursor-pointer focus:outline-none transition-transform duration-300 hover:scale-95 shadow-2xl"
           >
             <span className="text-xl md:text-3xl tracking-widest font-extralight group-hover:font-black transition-all duration-300">
               ЗАК

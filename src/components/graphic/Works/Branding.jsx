@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 
 const brandingData = [
-  { id: 1, year: "2026", name: "Wylery", type: "extrawide", thumbnail: "/works/branding/wylery.webp", fullCase: "/works/branding/wylery_Бренд.webp" },
+  { id: 1, year: "2026", name: "v w j", type: "extrawide", thumbnail: "/works/branding/wylery.webp", fullCase: "/works/branding/wylery_Бренд.webp" },
   { id: 2, year: "2026", name: "СИТИ ГРУМ", type: "wide", thumbnail: "/works/branding/Ситигрум2.webp", fullCase: "/works/branding/Ситигрум_бренд.webp" },
   { id: 3, year: "2025", name: "Красота", type: "wide", thumbnail: "/works/branding/Красота.webp", fullCase: "/works/branding/Бренд_Красота.webp" },
 ];
@@ -58,7 +58,7 @@ export default function Branding() {
 
   return (
     <div className="w-full pb-32 relative">
-      <div className="grid grid-cols-2 md:grid-cols-4 grid-flow-dense gap-[1px] bg-(--graphic-bg-secondary) border-[0.5px] border-white/10">
+      <div className="grid grid-cols-2 md:grid-cols-4 grid-flow-dense gap-px bg-(--graphic-bg-secondary) border-[0.5px] border-white/10">
         {brandingData.map((item) => (
           <BrandingCard key={item.id} item={item} onClick={setSelectedCase} />
         ))}
@@ -66,13 +66,13 @@ export default function Branding() {
 
       {selectedCase && (
         <div 
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/95 p-4 md:p-8 lg:p-12"
+          className="fixed inset-0 z-100 flex items-center justify-center bg-black/95 p-4 md:p-8 lg:p-12"
           onClick={() => setSelectedCase(null)}
         >
           
           <button 
             onClick={() => setSelectedCase(null)}
-            className="fixed bottom-6 right-4 md:bottom-auto md:top-8 md:right-8 z-[110] group flex items-center justify-center bg-red-600 text-white h-12 px-4 md:h-16 md:px-6 cursor-pointer focus:outline-none transition-transform duration-300 hover:scale-95 shadow-2xl"
+            className="fixed bottom-6 right-4 md:bottom-auto md:top-8 md:right-8 z-110 group flex items-center justify-center bg-red-600 text-white h-12 px-4 md:h-16 md:px-6 cursor-pointer focus:outline-none transition-transform duration-300 hover:scale-95 shadow-2xl"
           >
             <span className="text-xl md:text-3xl tracking-widest font-extralight group-hover:font-black transition-all duration-300">
               ЗАК
@@ -82,7 +82,7 @@ export default function Branding() {
             </span>
           </button>
           <div 
-            className="w-full h-full max-w-[1400px] bg-black border-[0.5px] border-white/20 overflow-y-auto relative [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] pb-24 md:pb-0"
+            className="w-full h-full max-w-350 bg-black border-[0.5px] border-white/20 overflow-y-auto relative [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] pb-24 md:pb-0"
             onClick={(e) => e.stopPropagation()} 
           >
              <img 

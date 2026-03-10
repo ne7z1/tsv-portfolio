@@ -102,9 +102,9 @@ export default function About() {
   return (
     <section
       id="about"
-      className="w-full min-h-screen flex flex-col justify-center max-w-[1440px] mx-auto px-4 md:px-12 lg:px-[120px] py-[100px] lg:py-[200px]"
+      className="w-full min-h-screen flex flex-col justify-center max-w-360 mx-auto px-4 md:px-12 lg:px-xl py-25 lg:py-50"
     >
-      <div className="flex flex-col uppercase text-[12vw] md:text-[80px] lg:text-[128px] leading-[1.1] lg:leading-[120px] tracking-tight">
+      <div className="flex flex-col uppercase text-[12vw] md:text-[80px] lg:text-[128px] leading-[1.1] lg:leading-xl tracking-tight">
         <HoverLine p1={"Я НЕ\u00A0"} p2="ПРОСТО" w1={900} w2={200} delay={0} />
         <HoverLine p1="РИСУЮ" w1={900} delay={100} />
         <HoverLine p1="КАРТИН" p2="КИ." w1={200} w2={900} delay={200} />
