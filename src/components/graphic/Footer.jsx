@@ -93,6 +93,11 @@ export default function Footer() {
             { text: "BE", base: "font-extralight", hover: "group-hover:font-black" },
             { text: "HANCE", base: "font-black", hover: "group-hover:font-extralight" }
           ]} />
+
+          <FooterLink href="/product" target="_blank" parts={[
+            { text: "ПРО", base: "font-extralight", hover: "group-hover:font-black" },
+            { text: "ДУКТ", base: "font-black", hover: "group-hover:font-extralight" }
+          ]} />
           
         </div>
 

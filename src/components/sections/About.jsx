@@ -21,17 +21,16 @@ export default function About() {
             
             <div className="flex flex-col gap-s text-[20px] leading-[30px] font-normal text-text-main">
               <p>
-                Я продуктовый дизайнер с аналитическим бэкграундом. Проектирую интерфейсы, 
-                опираясь на архитектуру данных и CustDev, а не на интуицию.
+                Я продуктовый дизайнер с фокусом на масштабируемые системы. Проектирую 
+                интерфейсы, опираясь на логику переменных и дизайн-системы, а не на интуицию.
               </p>
               <p>
-                Опыт работы со статистикой научил меня принимать решения на основе цифр. 
-                Я понимаю, как работают базы данных и бэкенд, поэтому говорю с разработчиками на одном языке
-                и учитываю технические ограничения еще на этапе сбора требований.
+                Понимаю возможности и ограничения фронтенда. Это позволяет мне создавать
+                макеты, которые легко переносятся в код и не требуют бесконечных правок на этапе разработки.
               </p>
               <p>
-                Помогаю бизнесу и стартапам переводить абстрактные идеи в строгие макеты и понятные ТЗ, 
-                превращая хаос в масштабируемые продукты.
+                Перевожу абстрактные идеи в строгие дизайн-решения. 
+                Моя задача — создать систему, которая будет стабильно работать и расти вместе с бизнесом.
               </p>
             </div>
           </div>
@@ -48,7 +47,10 @@ export default function About() {
                 <div className="flex flex-wrap gap-xs">
                   <Chip>Figma</Chip>
                   <Chip>UX/UI</Chip>
+                  <Chip>Variables</Chip>
+                  <Chip>Auto Layout</Chip>
                   <Chip>CustDev</Chip>
+                  <Chip>Дизайн-системы</Chip>
                   <Chip>Прототипирование</Chip>
                 </div>
               </div>
@@ -64,31 +66,10 @@ export default function About() {
               </div>
 
               <div className="flex flex-col gap-xs">
-                <span className="text-body font-normal text-text-main">Аналитика и данные</span>
-                <div className="flex flex-wrap gap-xs">
-                  <Chip>Python</Chip>
-                  <Chip>Pandas</Chip>
-                  <Chip>SQL</Chip>
-                  <Chip>PowerBI</Chip>
-                  <Chip>Excel</Chip>
-                </div>
-              </div>
-
-              <div className="flex flex-col gap-xs">
-                <span className="text-body font-normal text-text-main">Технологии</span>
-                <div className="flex flex-wrap gap-xs">
-                  <Chip>Архитектура ПО</Chip>
-                  <Chip>ООП</Chip>
-                  <Chip>Docker</Chip>
-                  <Chip>C# / C++</Chip>
-                </div>
-              </div>
-
-              <div className="flex flex-col gap-xs">
                 <span className="text-body font-normal text-text-main">Социальные навыки</span>
                 <ul className="list-disc list-inside text-body font-normal text-text-main space-y-2">
-                  <li>Перевод бизнес-требований в код</li>
-                  <li>Автономность</li>
+                  <li>Передача макетов в разработку</li>
+                  <li>Ответственность за результат</li>
                   <li>English B2</li>
                 </ul>
               </div>

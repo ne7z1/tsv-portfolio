@@ -41,7 +41,7 @@ export default function HubToggle({ mode, setMode }) {
       ) : (
         <button
           onClick={() => setMode("graphic")}
-          className="group flex items-center justify-center h-full px-[24px] text-[32px] text-white font-unbounded cursor-pointer bg-[var(--graphic-bg-primary)] rounded-none border-none outline-none ring-0 whitespace-nowrap"
+          className="group flex items-center justify-center h-full px-[24px] text-[32px] text-white font-unbounded cursor-pointer bg-(--graphic-bg-primary) rounded-none border-none outline-none ring-0 whitespace-nowrap"
         >
           <span className="font-extralight group-hover:font-black transition-[font-weight] duration-500 ease-in-out">
             Гра

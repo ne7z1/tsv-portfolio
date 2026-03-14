@@ -114,7 +114,7 @@ export default function AnalyticsHubCase() {
           <Button variant="secondary" href="/product#cases">
             Все проекты
           </Button>
-          <Button variant="primary" href="#" showIcon={false}>
+          <Button variant="primary" href="/product/cosmopizza" showIcon={false}>
             Следующий кейс
           </Button>
         </section>
