@@ -234,7 +234,7 @@ export default function CosmoPizzaCase() {
           <Button variant="secondary" href="/product#cases" className="w-full md:w-auto">
             Все проекты
           </Button>
-          <Button variant="primary" href="/product/tsv" showIcon={false} className="w-full md:w-auto">
+          <Button variant="primary" href="/product/carnavalvpn" showIcon={false} className="w-full md:w-auto">
             Следующий кейс
           </Button>
         </section>

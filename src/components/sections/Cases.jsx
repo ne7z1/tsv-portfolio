@@ -6,12 +6,11 @@ import Button from "@/components/ui/Button";
 
 export default function Cases() {
   const casesData = [
-    { title: "ПРОЕКТ: TSV.", tags: ["UX/UI", "Web", "2026"], image: "/image.webp", href: "/product/tsv"},
+    { title: "ПРОЕКТ: TSV.", tags: ["UX/UI", "Web", "2026"], image: "/works/product/tsv/cover.webp", href: "/product/tsv"},
     { title: "Портфолио vwj", tags: ["UX/UI", "Web", "2026"], image: "/works/product/vwj/Обложка.webp", href: "/product/vwj"},
     { title: "AnalyticsHub", tags: ["UX/UI", "Desktop", "2026"], image: "/works/product/analyticshub/COVER.webp", href: "/product/analyticshub"},
     { title: "КосмоПицца", tags: ["UX/UI", "Mobile", "2026"], image: "/works/product/cosmopizza/Обложка.webp", href: "/product/cosmopizza"}, 
-    { title: "CarnavalVPN", tags: ["UX/UI", "Web", "2026"], image: "/image.webp", href: "/product/carnavalvpn"}, 
-    { title: "В разработке", tags: ["скоро"], image: "/image.webp", href: ""}, 
+    { title: "CarnavalVPN", tags: ["UX/UI", "Web", "2026"], image: "/image.webp", href: "/product/carnavalvpn"},
   ];
 
   const types = ["Все", "Web", "Desktop", "Mobile"];
