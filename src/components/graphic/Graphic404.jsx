@@ -60,9 +60,6 @@ export default function Graphic404() {
 
       </div>
 
-      {/* === СЛОЙ 2: ГИГАНТСКИЕ ЦИФРЫ 404 (Z-20, DIFFERENCE, `#FFFFFF`) === */}
-      {/* Мы кладем БЕЛЫЕ цифры ПОВЕРХ белого текста с Difference. */}
-      {/* Это прожжет Cyan на красном и Черный на белых буквах. */}
       <div 
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white mix-blend-difference font-black leading-none pointer-events-none select-none z-20"
         style={{ fontSize: "clamp(150px, 45vw, 650px)" }}

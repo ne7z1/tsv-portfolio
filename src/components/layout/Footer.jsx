@@ -2,9 +2,11 @@
 
 import { useState } from "react";
 import Button from "../ui/Button";
+import PrivacyModal from "../ui/PrivacyModal";
 
 export default function Footer() {
     const [copied, setCopied] = useState(false);
+    const [isPrivacyOpen, setIsPrivacyOpen] = useState(false);
 
     const handleCopyEmail = () => {
         navigator.clipboard.writeText("tsvdsg@gmail.com");
@@ -26,17 +28,17 @@ export default function Footer() {
                         <h2 className="text-h2 font-semibold leading-tight">
                             Открыт к новым проектам
                         </h2>
-                        <Button variant="primary" href="https://t.me/ne7z1" target="_blank" rel="noopener noreferrer">
+                        <Button className="w-full md:w-auto" variant="primary" href="https://t.me/ne7z1" target="_blank" rel="noopener noreferrer">
                             Написать в Telegram
                         </Button>
                     </div>
 
                     {/* Правая колонка */}
-                    <div className="flex flex-col gap- md:gap-m items-start w-full md:max-w-[496px]">
+                    <div className="flex flex-col gap-m md:gap-m items-start w-full md:max-w-[496px]">
                         <h2 className="text-h2 font-semibold leading-tight">
                             Контакты
                         </h2>
-                        <div className="flex flex-col items-start gap-m md:gap-xs">
+                        <div className="flex flex-col items-start gap-s md:gap-xs">
                             <Button 
                               variant="text" 
                               href="https://career.habr.com/ne7z1" 
@@ -77,11 +79,16 @@ export default function Footer() {
                 </div>
                 
                 {/* 3. НИЖНЯЯ ЧАСТЬ */}
-                <div className="w-full border-t border-bg-primary/20 pt-m flex justify-center items-center">
+                <div className="w-full border-t border-bg-primary/20 pt-m flex justify-between items-center">
                     <p className="text-caption text-bg-primary/60 text-center text-left">
                     © 2026 TSV. <br />
                     Спроектировано с инженерной точностью
                     </p>
+                    <button
+                        onClick={() => setIsPrivacyOpen(true)}
+                        className="text-caption text-bg-primary/60 hover:text-bg-primary transition-colors cursor-pointer">
+                        Политика конфиденциальности
+                    </button>
                 </div>
 
             </div>
@@ -97,6 +104,7 @@ export default function Footer() {
                 </svg>
                 <span className="font-medium text-body">Email скопирован в буфер!</span>
             </div>
+            <PrivacyModal isOpen={isPrivacyOpen} onClose={() => setIsPrivacyOpen(false)} />
         </footer>
     )
 }

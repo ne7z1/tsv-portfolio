@@ -15,7 +15,7 @@ const unbounded = Unbounded({
 
 export default function GraphicLayout({ children }) {
   return (
-    <div className={`${unbounded.className} bg-[var(--graphic-bg-primary)] text-[var(--graphic-text-primary)] min-h-screen selection:bg-[var(--graphic-text-primary)] selection:text-[var(--graphic-bg-primary)] cursor-retro`}>
+    <div className={`${unbounded.className} bg-(--graphic-bg-primary) text-(--graphic-text-primary) min-h-screen selection:bg-(--graphic-text-primary) selection:text-(--graphic-bg-primary) cursor-retro`}>
       <Header />
       {children}
       <Footer />

@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import PrivacyModalGraphic from "../ui/PrivacyModalGraphic";
 
 const FooterLink = ({ href, parts, className = "", target = "_self" }) => (
   <Link 
@@ -23,6 +24,7 @@ const FooterLink = ({ href, parts, className = "", target = "_self" }) => (
 export default function Footer() {
   const [isCopied, setIsCopied] = useState(false);
   const emailAddress = "tsvdsg@gmail.com";
+  const [isPrivacyOpen, setIsPrivacyOpen] = useState(false);
 
   const handleCopyEmail = () => {
     navigator.clipboard.writeText(emailAddress);
@@ -33,11 +35,11 @@ export default function Footer() {
   };
 
   return (
-    <footer id="contacts" className="w-full bg-[var(--graphic-bg-secondary)] text-[var(--graphic-text-primary)] py-[100px] lg:py-[150px] px-4 md:px-12 lg:px-[120px] flex justify-end">
+    <footer id="contacts" className="w-full bg-(--graphic-bg-secondary) text-(--graphic-text-primary) py-[100px] lg:py-[150px] px-4 md:px-12 lg:px-[120px] flex justify-end">
       
       <div className="flex gap-4 md:gap-8 lg:gap-12">
         
-        <div className="flex flex-col items-end text-[11vw] md:text-[80px] lg:text-[110px] leading-[0.85] tracking-tight uppercase">
+        <div className="gap-4 md:gap-0 flex flex-col items-end text-[11vw] md:text-[80px] lg:text-[110px] leading-[0.85] tracking-tight uppercase">
           
           <Link 
             href="https://t.me/ne7z1"
@@ -98,6 +100,16 @@ export default function Footer() {
             { text: "ПРО", base: "font-extralight", hover: "group-hover:font-black" },
             { text: "ДУКТ", base: "font-black", hover: "group-hover:font-extralight" }
           ]} />
+          <button
+            onClick={() => setIsPrivacyOpen(true)}
+            className="group flex whitespace-nowrap w-fit cursor-pointer mt-6">
+            <span className="font-extralight group-hover:font-black transition-all duration-300 ease-out">
+              ПОЛИТИ
+            </span>
+            <span className="font-black group-hover:font-extralight transition-all duration-300 ease-out">
+              КА
+            </span>
+          </button>
           
         </div>
 
@@ -110,6 +122,7 @@ export default function Footer() {
         </div>
 
       </div>
+      <PrivacyModalGraphic isOpen={isPrivacyOpen} onClose={() => setIsPrivacyOpen(false)} />
     </footer>
   );
 }

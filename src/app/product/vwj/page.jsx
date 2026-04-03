@@ -11,7 +11,7 @@ const caseData = {
   
   hero: {
     subtitle: "Проектирование высокотехнологичной дизайн-системы для фотографа.",
-    text: "Создаю визуальный контент, который передает характер и атмосферу без лишних слов.",
+    text: "Создал визуальный контент, который передает характер и атмосферу без лишних слов.",
     image: `${BASE_PATH}/hero.webp`, 
   },
 
@@ -217,10 +217,10 @@ export default function WyleryCase() {
         </section>
 
         <section className="flex flex-wrap items-center gap-s pt-m w-full border-t border-[#CBD5E1]/50 mt-4">
-          <Button variant="secondary" href="/product#cases">
+          <Button variant="secondary" href="/product#cases" className="w-full md:w-auto">
             Все проекты
           </Button>
-          <Button variant="primary" href="/product/analyticshub" showIcon={false}>
+          <Button variant="primary" href="/product/analyticshub" showIcon={false} className="w-full md:w-auto">
             Следующий кейс
           </Button>
         </section>

@@ -60,7 +60,7 @@ export default function About() {
                 <div className="flex flex-wrap gap-xs">
                   <Chip>HTML5</Chip>
                   <Chip>CSS3</Chip>
-                  <Chip>JavaScript</Chip>
+                  <Chip>Tailwind CSS</Chip>
                   <Chip>React.js</Chip>
                 </div>
               </div>

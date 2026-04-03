@@ -96,9 +96,9 @@ export default function Header(){
             }`}
           >
             <div className="flex flex-col items-center gap-s">
-              <Button variant="text" href="/product#about" onClick={(e) => { setIsMenuOpen(false); handleScroll(e, "about"); }} className="text-caption font-medium">Обо мне</Button>
-              <Button variant="text" href="/product#cases" onClick={(e) => { setIsMenuOpen(false); handleScroll(e, "cases"); }} className="text-caption font-medium">Проекты</Button>
-              <Button variant="text" href="/product#contacts" onClick={(e) => { setIsMenuOpen(false); handleScroll(e, "contacts"); }} className="text-caption font-medium">Контакты</Button>
+              <Button variant="text" href="/product#about" onClick={(e) => { setIsMenuOpen(false); handleScroll(e, "about"); }} className="text-caption font-medium w-full">Обо мне</Button>
+              <Button variant="text" href="/product#cases" onClick={(e) => { setIsMenuOpen(false); handleScroll(e, "cases"); }} className="text-caption font-medium w-full">Проекты</Button>
+              <Button variant="text" href="/product#contacts" onClick={(e) => { setIsMenuOpen(false); handleScroll(e, "contacts"); }} className="text-caption font-medium w-full">Контакты</Button>
               <Button variant="text" href="/graphic" onClick={() => setIsMenuOpen(false)} className="text-caption font-medium">Графика</Button>
             </div>
           </div>

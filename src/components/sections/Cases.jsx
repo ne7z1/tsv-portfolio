@@ -35,10 +35,10 @@ export default function Cases() {
         </div>
 
         <div className="flex flex-wrap gap-s">
-          <Button variant="primary" href="#contacts">
+          <Button variant="primary" href="#contacts" className="w-full md:w-70">
             Написать мне
           </Button>
-          <Button variant="secondary" href="/graphic" target="_blank" rel="noopener noreferrer" showIcon={true}>
+          <Button variant="secondary" href="/graphic" target="_blank" rel="noopener noreferrer" className="w-full md:w-auto" showIcon={true}>
             Портфолио графики
           </Button>
         </div>

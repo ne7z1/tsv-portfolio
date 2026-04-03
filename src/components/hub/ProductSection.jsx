@@ -7,11 +7,11 @@ export default function ProductSection() {
     <div className="w-full flex flex-col md:flex-row items-center justify-between gap-12 animate-in fade-in duration-700">
       
       <div className="flex flex-col items-start w-full max-w-[600px]">
-        <h1 className="text-h2 md:text-h1 lg:text-h1 font-bold  text-text-main leading-[1.1] tracking-h1 mb-l">
+        <h1 className="text-h2 md:text-h1 lg:text-h1 font-bold text-text-main leading-[1.1] tracking-h1 mb-l">
           Проектировщик<br />
           <span className="whitespace-nowrap">цифровых систем.</span>
         </h1>
-        <Button variant="primary" href="/product">
+        <Button variant="primary" href="/product" className="w-full md:w-auto">
           Портфолио
         </Button>
       </div>

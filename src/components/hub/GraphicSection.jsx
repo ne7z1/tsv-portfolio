@@ -44,13 +44,13 @@ export default function GraphicSection() {
       <div className="mix-blend-difference relative z-10 w-full flex flex-col mb-10 lg:mb-14 text-[13vw] md:text-[100px] lg:text-[140px] leading-[0.85] transform-gpu">
         
         <div className="flex flex-col">
-          <GraphicWord text="ЛОМАЙ" defaultBlack={true} />
-          <GraphicWord text="СИСТЕМУ!" defaultBlack={false} />
+          <GraphicWord text="ЛОМАЙ" defaultBlack={false} />
+          <GraphicWord text="СИСТЕМУ!" defaultBlack={true} />
         </div>
 
         <div className="flex flex-col">
-          <GraphicWord text="СОЗДАВАЙ" defaultBlack={true} />
-          <GraphicWord text="ШУМ!" defaultBlack={false} />
+          <GraphicWord text="СОЗДАВАЙ" defaultBlack={false} />
+          <GraphicWord text="ШУМ!" defaultBlack={true} />
         </div>
 
       </div>

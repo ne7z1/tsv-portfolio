@@ -19,10 +19,10 @@ export default function Hero() {
           </div>
           
           <div className="flex flex-wrap gap-s">
-            <Button variant="primary" href="#cases">
+            <Button variant="primary" href="#cases" className="w-full md:w-70">
               Проекты
             </Button>
-            <Button variant="secondary" href="#contacts">
+            <Button variant="secondary" href="#contacts" className="w-full md:w-70">
               Контакты
             </Button>
           </div>

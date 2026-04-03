@@ -111,10 +111,10 @@ export default function AnalyticsHubCase() {
         </section>
 
         <section className="flex flex-wrap items-center gap-s pt-l mt-m border-t border-[#CBD5E1]/50 w-full">
-          <Button variant="secondary" href="/product#cases">
+          <Button variant="secondary" href="/product#cases" className="w-full md:w-auto">
             Все проекты
           </Button>
-          <Button variant="primary" href="/product/cosmopizza" showIcon={false}>
+          <Button variant="primary" href="/product/cosmopizza" showIcon={false} className="w-full md:w-auto">
             Следующий кейс
           </Button>
         </section>
